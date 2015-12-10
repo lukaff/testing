@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title></title>
+    <script type="text/javascript">
+      var url = "http://a53aa8f4-3bd7-4096-8ee1-093cb2eb1eab.staging.trayapp.io";
+
+      function send(state) {
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url + "/?state=" + state, true);
+
+      xhr.send();
+      }
+    </script>
+  </head>
+  <body>
+    <img src="smiley-happy.png" onclick="send('happy');" />
+    <img src="smiley-good.png" onclick="send('good');" />
+    <img src="smiley-meh.png" onclick="send('meh');" />
+    <img src="smiley-sad.png" onclick="send('sad');" />
+    <img src="smiley-mad.png" onclick="send('mad');" />
+  </body>
+</html>
